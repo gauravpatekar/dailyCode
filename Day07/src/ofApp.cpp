@@ -3,9 +3,11 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
-    ofSetLineWidth(2);
+    ofSetLineWidth(4);
     ofSetCircleResolution(100);
-    ofSetBackgroundColor(250, 0, 50);
+    //ofSetBackgroundColor(250, 0, 50);
+    ofSetBackgroundColor(0, 0, 0);
+    ofNoFill();
     
 }
 
@@ -18,7 +20,7 @@ void ofApp::update(){
 void ofApp::draw(){
     
     //drawing - onion
-    for (int j = 0; j < 3; j++){
+    for (int j = 0; j < 1; j++){
         for (int i = 0; i > -50; i--){
             int x = ofNoise(xoff + 0.005*i + 1.3*j) * .5 * ofGetWidth() + 0.5 * ofGetWidth()/2;
             int y = ofNoise(yoff + 0.005*i + 3.7*j) * .5 * ofGetHeight() + 0.5 * ofGetHeight()/2;
@@ -31,8 +33,8 @@ void ofApp::draw(){
             
             //ofSetColor(abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10);
             //ofSetColor(j*abs(i)*abs(i)/10, 255*j-abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10);
-            //ofSetColor(abs(i)*abs(i)/10, 255*j-abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10);
-            ofSetColor(abs(i)*abs(i)/10, -abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10);
+            ofSetColor(abs(i)*abs(i)/10, 255*j-abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10, 0-i);
+            //ofSetColor(abs(i)*abs(i)/10, -abs(i)*abs(i)/10, 255-abs(i)*abs(i)/10);
             
             ofDrawCircle(x, y, 50-abs(i));
             
