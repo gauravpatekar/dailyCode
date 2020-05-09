@@ -3,10 +3,9 @@
 //--------------------------------------------------------------
 void ofApp::setup(){
     
-    font1.load("MajorMonoDisplay-Regular.ttf", 80);
+    font1.load("MajorMonoDisplay-Regular.ttf", 60);
     ofSetBackgroundColor(0, 0, 0);
-    ofSetLineWidth(2);
-
+    
 }
 
 //--------------------------------------------------------------
@@ -18,9 +17,10 @@ void ofApp::update(){
 void ofApp::draw(){
     
     ofTranslate(ofGetWidth()/2, ofGetHeight()/2);
+    //ofRotateDeg(toff*100, 0, 1, .5);
     
-//    ofSetColor(255, 255, 255);
-//    font1.drawString("TESTING", -300, 40);
+    ofSetColor(255, 255, 255);
+    font1.drawString("TESTING", -350, 40);
 
         for(float i = 0; i < 1080; i++){
             r = 100 + 300 * ofNoise(i/30, toff);
@@ -31,14 +31,17 @@ void ofApp::draw(){
             ofSetLineWidth(3);
             ofDrawLine(x, y, px, py);
             if(r >= 100 && r < 200){
-                ofSetColor(255, 255, 255);
+                //ofSetColor(255, 255, 255);
                 //ofDrawCircle(x, y, c);
-                ofSetLineWidth(3);
-                ofDrawLine(x, y, px, py);
+                //ofSetLineWidth(3);
+                //ofDrawLine(x, y, px, py);
             }
             px = x;
             py = y;
         }
+    
+    ofSetColor(255, 255, 255);
+    font1.drawString("TEXT", 100, 40);
     
     toff += 0.003;
 }
