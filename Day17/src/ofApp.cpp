@@ -16,11 +16,13 @@ void ofApp::draw(){
     ofSetBackgroundColor(0, 0, 0);
     
     for(float i = 0; i < ofGetWidth(); i++){
-
+        
+//        //day 17
 //        //for 2 non intersecting waves
 //        int calcY =  ofGetHeight()/3 + (400 * (ofNoise(i/400, toff)-0.5));
 //        int calcY2 =  2 * ofGetHeight()/3 + (400 * (ofNoise(i/400, toff+2)-0.5));
         
+        //Day 18
         //for 2 intersecting waves
         int calcY =  ofGetHeight()/2 + (600 * (ofNoise(i/800, toff)-0.5));
         int calcY2 =  ofGetHeight()/2 + (600 * (ofNoise(i/800, toff+2)-0.5));
