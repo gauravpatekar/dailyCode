@@ -1,6 +1,6 @@
 #include "ofApp.h"
-#define WIDTH 500
-#define HEIGHT 500
+#define WIDTH 600
+#define HEIGHT 600
 
 //--------------------------------------------------------------
 void ofApp::setup(){
@@ -29,16 +29,21 @@ void ofApp::draw(){
     
 //    img.draw((float)WIDTH-(float)(ofGetFrameNum()%WIDTH*2),0);
       
-    ofFill();
+    ofNoFill();
+    ofSetLineWidth(3);
     ofSetColor(255,255,255);
-//    ofDrawRectangle(0, 0, 1, 500);
-    ofDrawRectangle(0, 0, 500, 1);
-    
-    ofSetColor(25,255,255);
-    ofDrawRectangle(499, 0, 10, 500);
-    ofSetColor(255,255,255);
-    ofDrawRectangle(0, 399, 500, 10);
-    
+////    ofDrawRectangle(0, 0, 1, 500);
+//    ofDrawRectangle(0, 0, 500, 1);
+//
+//    ofSetColor(25,255,255);
+//    ofDrawRectangle(499, 0, 10, 500);
+//    ofSetColor(255,255,255);
+//    ofDrawRectangle(0, 399, 500, 10);
+    ofDrawRectangle(0, 0, 500, 500);
+    ofDrawRectangle(50, 50, 400, 400);
+    ofDrawRectangle(100, 100, 300, 300);
+    ofDrawRectangle(150, 150, 200, 200);
+    ofDrawRectangle(200, 200, 100, 100);
 //    ofSetColor(0,255,100);
 //    ofDrawRectangle(100, 100, 100, 100);
 //
